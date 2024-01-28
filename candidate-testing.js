@@ -39,20 +39,25 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
+  
+  // correctAnswers[i] = correctAnswers.join('').toLowerCase();
+  candidateAnswers = candidateAnswers.join().toLowerCase();
+  correctAnswers = correctAnswers.join().toLowerCase();
   for (i = 0; i < questions.length; i++){
-   if (candidateAnswers.join('').toLowerCase() === correctAnswers.join('').toLowerCase()) {
-    correct.push(candidateAnswers[i]);
+    if (candidateAnswers[i] === correctAnswers[i]) {
+    correct.push(candidateAnswers);
     } else {
-    wrong.push(candidateAnswers[i]);
+    wrong.push(candidateAnswers);
      }
 }
 
 let grade = correct.length  / 5 * 100;  //TODO 3.2 use this variable to calculate the candidates score.
 console.log(grade);
+console.log(correct);
+console.log(wrong);
 
-console.log(`Your answers were: ${candidateAnswers}.
-The correct answers were: ${correctAnswers[0]}, ${correctAnswers[1]}, ${correctAnswers[2]}, ${correctAnswers[3]}, ${correctAnswers[4]}.`);
+// console.log(`Your answers were: ${candidateAnswers}.
+// The correct answers were: ${correctAnswers[0]}, ${correctAnswers[1]}, ${correctAnswers[2]}, ${correctAnswers[3]}, ${correctAnswers[4]}.`);
   return grade;
   
 }
