@@ -20,6 +20,7 @@ let wrong = [];
 
 
 
+
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
   const input = require('readline-sync');
@@ -36,25 +37,27 @@ function askQuestion() {
   }
   }
 
+
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   
-  // correctAnswers[i] = correctAnswers.join('').toLowerCase();
-  candidateAnswers = candidateAnswers.join().toLowerCase();
-  correctAnswers = correctAnswers.join().toLowerCase();
+  // canAnsLower = candidateAnswers.map(word => word.toLowerCase());
+  // corAnsLower = correctAnswers.map(word => word.toLowerCase());
+  // candidateAnswers.toLowerCase();
+  // correctAnswers.toLowerCase();
   for (i = 0; i < questions.length; i++){
-    if (candidateAnswers[i] === correctAnswers[i]) {
-    correct.push(candidateAnswers);
-    } else {
-    wrong.push(candidateAnswers);
-     }
+    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
+      correct.push(candidateAnswers[i]);
+      } else {
+      wrong.push(candidateAnswers[i]);
+      }
 }
 
 let grade = correct.length  / 5 * 100;  //TODO 3.2 use this variable to calculate the candidates score.
-console.log(grade);
-console.log(correct);
-console.log(wrong);
+// console.log(grade);
+// console.log(correct);
+// console.log(wrong);
 
 // console.log(`Your answers were: ${candidateAnswers}.
 // The correct answers were: ${correctAnswers[0]}, ${correctAnswers[1]}, ${correctAnswers[2]}, ${correctAnswers[3]}, ${correctAnswers[4]}.`);
