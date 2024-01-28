@@ -15,8 +15,7 @@ let questions = ["Who was the first American woman in space? ", "True or false: 
 "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ", "What is the minimum crew size for the ISS? "];
 let correctAnswers = ["Sally Ride", "true", "40", "Trajectory", '3'];
 let candidateAnswers = [];
-let correct = [];
-let wrong = [];
+
 
 
 
@@ -46,6 +45,9 @@ function gradeQuiz(candidateAnswers) {
   // corAnsLower = correctAnswers.map(word => word.toLowerCase());
   // candidateAnswers.toLowerCase();
   // correctAnswers.toLowerCase();
+  let correct = [];
+  let wrong = [];
+
   for (i = 0; i < questions.length; i++){
     if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
       correct.push(candidateAnswers[i]);
@@ -55,9 +57,9 @@ function gradeQuiz(candidateAnswers) {
 }
 
 let grade = correct.length  / 5 * 100;  //TODO 3.2 use this variable to calculate the candidates score.
-// console.log(grade);
-// console.log(correct);
-// console.log(wrong);
+console.log(grade);
+console.log(correct);
+console.log(wrong);
 
 // console.log(`Your answers were: ${candidateAnswers}.
 // The correct answers were: ${correctAnswers[0]}, ${correctAnswers[1]}, ${correctAnswers[2]}, ${correctAnswers[3]}, ${correctAnswers[4]}.`);
