@@ -40,9 +40,6 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-  
-  // canAnsLower = candidateAnswers.map(word => word.toLowerCase());
-  // corAnsLower = correctAnswers.map(word => word.toLowerCase());
   // candidateAnswers.toLowerCase();
   // correctAnswers.toLowerCase();
   let correct = [];
@@ -57,12 +54,13 @@ function gradeQuiz(candidateAnswers) {
 }
 
 let grade = correct.length  / 5 * 100;  //TODO 3.2 use this variable to calculate the candidates score.
-console.log(grade);
-console.log(correct);
-console.log(wrong);
+// console.log(grade);
+// console.log(correct);
+// console.log(wrong);
 
-// console.log(`Your answers were: ${candidateAnswers}.
-// The correct answers were: ${correctAnswers[0]}, ${correctAnswers[1]}, ${correctAnswers[2]}, ${correctAnswers[3]}, ${correctAnswers[4]}.`);
+console.log(`Your answers were: ${candidateAnswers}.
+The correct answers were: ${correctAnswers[0]}, ${correctAnswers[1]}, ${correctAnswers[2]}, ${correctAnswers[3]}, ${correctAnswers[4]}.
+You scored ${grade}%!`);
   return grade;
   
 }
